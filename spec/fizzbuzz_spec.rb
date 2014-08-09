@@ -28,6 +28,14 @@ describe 'Fizzbuzz' do
 
 	# Divisible by 15 case
 
-	
+	it "Should be divisible by 15" do 
+
+		expect(is_divisible_by_fifteen?(15)).to be true
+	end
+
+	it "Should be not divisible by 15" do
+
+		expect(is_divisible_by_fifteen?(1)).not_to be true
+	end
 	
 end
