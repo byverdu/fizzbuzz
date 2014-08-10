@@ -37,5 +37,12 @@ describe 'Fizzbuzz' do
 
 		expect(is_divisible_by_fifteen?(1)).not_to be true
 	end
+
+	it "Should be divisible by a divisor" do
+
+		expect(is_divisible_by?(6,3)).to eq(true)
+	end
 	
 end
+
+
