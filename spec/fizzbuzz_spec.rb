@@ -38,10 +38,16 @@ describe 'Fizzbuzz' do
 		expect(is_divisible_by_fifteen?(1)).not_to be true
 	end
 
+	# Global Method
+
 	it "Should be divisible by a divisor" do
 
 		expect(is_divisible_by?(6,3)).to eq(true)
 	end
+
+	it "Should say Fizz if is divisible by 3"do
+
+	expect
 	
 end
 

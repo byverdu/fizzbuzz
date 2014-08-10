@@ -1,1 +1,1 @@
-The FizzBuzz game developed RSpec and Ruby in a TDD way
+The FizzBuzz game developed using RSpec and Ruby in a TDD way
