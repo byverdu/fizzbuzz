@@ -1,54 +1,55 @@
 require 'fizzbuzz'
 
-describe 'Fizzbuzz' do
+describe 'FizzBuzz' do
 
-	# Divisible by 3 case
+	let(:fizzbuzz) {FizzBuzz.new}
 
-	it "Should be divisible by 3" do
+# Context for divisible numbers
 
-		expect(is_divisible_by_three?(3)).to be true
+	context "should be divisible by" do
+
+		it "3" do
+			expect(fizzbuzz.is_divisible_by_three?(3)).to be true
+		end
+
+		it "5" do
+			expect(fizzbuzz.is_divisible_by_five?(5)).to be true
+		end
 	end
 
-	it "Should not be divisible by 3" do
 
-		expect(is_divisible_by_three?(1)).not_to be true
+# Context for non divisible numbers
+
+	context "shouldn't be divisible by" do
+
+		it "3" do
+			expect(fizzbuzz.is_divisible_by_three?(1)).to be false
+		end
+
+		it "5" do
+			expect(fizzbuzz.is_divisible_by_five?(1)).to be false
+		end
 	end
 
-	# Divisible by 5 case
+# Context displaying FizzBuzz
 
-	it "Should be divisible by 5" do
+	context "should display Fizz, Buzz, FizzBuzz or the number" do
 
-		expect(is_divisible_by_five?(5)).to be true
+		it "says Fizz if is divisible by 3" do
+			expect(fizzbuzz.play_game(3)).to eq 'Fizz'
+		end
+
+		it "says Buzz if is divisible by 5" do
+			expect(fizzbuzz.play_game(5)).to eq 'Buzz'
+		end
+
+		it "say FizzBuzz if is divisible by 3 and 5" do
+			expect(fizzbuzz.play_game(15)).to eq 'FizzBuzz'
+		end
+
+		it "displays the number if is not divisible by 3, 5" do
+			expect(fizzbuzz.play_game(1)).to eq 1
+		end
 	end
 
-	it "Should not be divisible by 5" do
-
-		expect(is_divisible_by_five?(1)).not_to be true
-	end
-
-	# Divisible by 15 case
-
-	it "Should be divisible by 15" do 
-
-		expect(is_divisible_by_fifteen?(15)).to be true
-	end
-
-	it "Should be not divisible by 15" do
-
-		expect(is_divisible_by_fifteen?(1)).not_to be true
-	end
-
-	# Global Method
-
-	it "Should be divisible by a divisor" do
-
-		expect(is_divisible_by?(6,3)).to eq(true)
-	end
-
-	it "Should say Fizz if is divisible by 3"do
-
-	expect
-	
 end
-
-
