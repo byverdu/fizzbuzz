@@ -13,7 +13,7 @@ First contact with TDD using RSpec.
 
 ### How to use
 
-1. `> clone https://github.com/byverdu/fizzbuzz.git
+1. `> clone https://github.com/byverdu/fizzbuzz.git`
 1. `> cd fizzbuzz`
 1. `> irb`
 1. `> require '.lib/fizzbuzz.rb'`
